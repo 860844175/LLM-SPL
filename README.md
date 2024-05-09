@@ -8,8 +8,8 @@
 
 ## Commit Graph Construction(`graph_construction/`)
 * Matching commit-commit relationships using information from the dataset and download GitHub repositories. 
-* Construct a commit-commit relationship graph based on the matched relationships
-* Leverage metadata and extracted textual information from GitHub to build the graph
+* Construct a commit-commit relationship graph based on the matched relationships.
+* Leverage metadata and extracted textual information from GitHub to build the graph.
 
 
 ## LLM Integration(`acquire_LLM_feedback/`)
@@ -18,7 +18,7 @@
     * provide guidance for creating inter-commit relationship graph(F2). (`llm_inter_commit_feedback.py`)
 
 
-## Model(`model/')
+## Model(`model/`)
 * Baseline Model(`Base_SPL.py`)
     * we utilize the VCMatch as our baseline model to provide initial feedback through inputing two feature set F0, F0 + F1.
 
