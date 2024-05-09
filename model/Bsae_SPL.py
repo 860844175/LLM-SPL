@@ -334,6 +334,10 @@ def main():
 
     parser.add_argument('dataset_path', default = '../dataset/total_dataset.csv', type = str)
 
+    args = parser.parse_args()
+
+    dataset_path = args.dataset_path
+
     vuln_data_path = '../data/vuln_data.csv'
 
     df = pickle.load(open(dataset_path, 'rb'))
@@ -351,7 +355,7 @@ def main():
                     'mess_max', 'mess_sum', 'mess_mean', 'mess_var', 'code_shared_num',
                     'code_shared_ratio', 'code_max', 'code_sum', 'code_mean', 'code_var']
 
-    if 'llm_relevance_feature' in df.columns:
+    if 'llm_relevance_score' in df.columns:
         output_folder_name = 'iter0'
     else:
         output_folder_name = 'iter1'
